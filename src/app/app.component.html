@@ -1,0 +1,29 @@
+<h1>{{movieTitle}}</h1>
+{{selectedIndex}}
+<div style="display: flex; flex-wrap:wrap">
+    <div style="margin: 25px;">
+        <h3 [hidden]="!isSelected(0)">Eligida</h3>
+        <img src="./assets/img/56015l02_bigsal_argentina_intpayoff_4x5_b6776139.jpeg" alt="">
+        <br>
+        <button [disabled]="anySelected() && !isSelected(0)" (click)="onVoteClick(0)">{{getButtonText(0)}}</button>
+    </div>
+    <div style="margin: 25px;">
+        <h3 [hidden]="!isSelected(1)">Eligida</h3>
+        <img src="./assets/img/beta_epic_payoff_las_f8ee4a65.jpeg" alt="">
+        <br>
+        <button [disabled]="anySelected() && !isSelected(1)" (click)="onVoteClick(1)">{{getButtonText(1)}}</button>
+    </div>
+    <div style="margin: 25px;">
+        <h3 [hidden]="!isSelected(2)">Eligida</h3>
+        <img src="./assets/img/encanto_ka_las_pay1_92ad7410.jpeg" alt="">
+        <br>
+        <button [disabled]="anySelected() && !isSelected(2)" (click)="onVoteClick(2)">{{getButtonText(2)}}</button>
+    </div>
+    <div style="margin: 25px;">
+        <h3 [hidden]="!isSelected(3)">Eligida</h3>
+        <img src="./assets/img/image_4f447b1d.jpeg" alt="">
+        <br>
+        <button [disabled]="anySelected() && !isSelected(3)" (click)="onVoteClick(3)">{{getButtonText(3)}}</button>
+    </div>
+</div>
+<router-outlet></router-outlet>
